@@ -1,5 +1,6 @@
 # Crowdfunding
-The react code resides in the client folder.
+
+## web3
 
 ```
 npx thirdweb@latest create --contract
@@ -86,6 +87,15 @@ defaultExport: 'sepolia',
 ```
 npm run deploy
 ```
+
+## client
+The react code resides in the client folder.
+
+```
+npx thirdweb create --app
+```
+
+This command gives us a CLI to create a react app.
 
 ## References
 <a id="1">[1]</a> https://www.mickpatterson.com.au/blog/how-to-use-environment-variables-in-nodejs-with-express-and-dotenv#:~:text=Dotenv%20is%20an%20npm%20package,are%20added%20into%20the%20process.
