@@ -17,12 +17,12 @@ Dotenv is an npm package that can be added to any NodeJs application. The main p
 #### Smart Contracts
 Smart contracts are simply programs stored on a blockchain that run when predetermined conditions are met. They typically are used to automate the execution of an agreement so that all participants can be immediately certain of the outcome, without any intermediary's involvement or time loss. [[2]](#2)
 
-### Testnet
+#### Testnet
 Testnets are used by developers to ensure that the smart contracts and dApps (Decentralized Applications) they deploy are functional and secure.  [[10]](#10)
 
 <b>Note</b>: Goerli will be deprecated in Q1 2023 but will be supported until Q4 2023, so developers and users should migrate to Sepolia for testing and development purposes. [[11]](#11)
 
-### RPC
+#### RPC
 Remote Procedure Call is a software communication protocol that one program can use to request a service from a program located in another computer on a network without having to understand the network's details. [[12]](#12)
 
 #### Solidity
@@ -66,6 +66,25 @@ contract MyContract {
     return myNumber;
   }
 }
+```
+
+#### Deploying Smart Contract
+- Export Sepolia Test Network Private Key to .env.
+- Add Sepolia RPC to hardhat.config.js
+
+```javascript
+defaultExport: 'sepolia',
+    networks: {
+      hardhat: {},
+      sepolia: {
+        url: 'https://rpc.ankr.com/eth_sepolia',
+        accounts: [`0x${process.env.PRIVATE_KEY}`],
+      }
+    },
+```
+- Finally, run the following command in the terminal.
+```
+npm run deploy
 ```
 
 ## References
